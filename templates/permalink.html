@@ -1,0 +1,11 @@
+{% extends "blog_base.html" %}
+{% block title %} blog_permalink {% endblock %}
+{% block heading %}     <a href='/blog' class='main-title'>Submitted Post</a> {% endblock %}
+{% block body %}
+
+{{post.render() | safe}}
+<div class="post-date">
+{{queried}}
+<div>
+{% endblock %}
+

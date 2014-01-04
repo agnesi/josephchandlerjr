@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %} login {% endblock %}
+{% block heading %}
+    <div class='main-title'>Login</div>
+{% endblock %}
+{% block options %}
+    <div class='options'>
+        <a href="/wiki" class='option'> home </a>
+        <a href="/wiki/signup" class='option'> register</a>
+    </div>
+{% endblock %}
+{% block body %}
+    <form method="post">
+        <table> 
+            <tr>
+                <td>USERNAME</td>
+                <td>
+                    <input name="username" value={{username}}>
+                </td>
+                <td class="error">{{error}}</td>
+            </tr>
+            <tr>
+                <td>PASSWORD</td>
+                <td>
+                    <input type="password" name="password">
+                </td>
+                <td class="error"></td>
+            </tr>               
+        </table>
+        <input type="submit">
+    </form>
+{% endblock %}

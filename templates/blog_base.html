@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+    {% block title %}
+    {% endblock %} 
+    </title>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    <link type='text/css' rel='stylesheet' href='/static/stylesheets/main.css' />
+
+        {% block heading %}
+        {% endblock %} 
+
+    {% block options %}
+    {% endblock %}
+    <br>
+    <hr>
+
+    {% block body %}
+    {% endblock %}
+
+</body>
+
+
+</html>

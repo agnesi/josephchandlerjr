@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %} wiki_history {% endblock %}
+{% block heading %} 
+    <div class='title'>History</div> 
+{% endblock %}
+{% block options %}
+
+    <div  class="navigation">
+    <ul>
+        <li>
+            <a href="/wiki" class="nav-option"> front </a>
+        </li>
+        <li class="nav-option-sep"> | </li>
+        <li>
+            <a href='/wiki/{{in_out}}' class="nav-option">{{in_out}}</a>
+        </li>
+    </ul>
+    </div>
+    <div style="clear:both"/>
+
+{% endblock %}
+{% block body %}
+    {% if not edits%}
+        No Edits
+    {% endif %}
+    {% for (version,modified,content,color) in edits %}
+        <ul class='history' style="background:{{color}}">
+             <li class='history'>
+                <a href='#'> view <a> 
+            </li>
+             <li class='history'>
+                version # {{version}}
+            </li>
+            <li class='history'>
+                {{modified}}
+            </li>
+             <li class='history'>
+                content: {{content[:100]}} 
+            </li>
+
+        </ul>
+    {% endfor %}
+
+{% endblock %}

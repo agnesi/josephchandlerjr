@@ -1,0 +1,62 @@
+import random
+import hmac
+import string
+import datetime
+from hashlib import sha256
+from lib.secret import SECRET
+from google.appengine.api import memcache
+
+def make_pw_hash(username,password,salt=None):
+    """Returns 'salt|hash(salt + username + password)' """
+    salt = salt or make_salt()
+    value = username+password
+    h = hmac.new(salt,value,sha256).hexdigest()
+    return '%s|%s' %(salt,h)
+
+def valid_pw(username,password,h):
+    salt = str(h.split('|')[0])
+    return make_pw_hash(str(username),str(password),salt=salt) == h
+
+def make_secure_cookie(s):
+    """Returns 's|hash(s + salt)' """
+    value = hmac.new(SECRET,s,sha256).hexdigest()
+    return '%s|%s' %(s,str(value))
+
+def get_cookie_val(cookie):
+    val = cookie.split('|')[0]
+    return make_secure_cookie(val) == cookie and val
+
+def make_salt():
+    return ''.join((random.choice(string.letters)) for _ in xrange(5))
+
+def get_time_delta(t1):
+    t2 = datetime.datetime.utcnow()
+    td = t2 - t1
+    days = td.days
+    hours, remainder = divmod(td.seconds,3600)
+    minutes, seconds = divmod(remainder,60)
+    d = '%s days' %days
+    m = '%s minutes' %minutes
+    s = '%s seconds' %seconds
+    if seconds == 1:
+        s = s[:-1]
+    if days > 0:
+        return ' '.join([d,m,s])
+    elif minutes > 0:
+        return ' '.join([m,s])
+    else:
+        return s
+        
+def age_set(key,val):
+    """Sets sets key in memcache to value (val,timestamp)"""
+    memcache.set(key,(val,datetime.datetime.utcnow()))
+    
+def age_get(key):
+    """Returns value associated with key. 
+       If value is None and key == 'front' returns DB query for 'front'
+       else return None"""
+    val = memcache.get(key)
+    if val:
+        return val
+    else:
+        return None

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %} blog {% endblock %}
+{% block heading %} CS253 BLOG {% endblock %}
+{% block body %}
+    <form method="post">
+        <label> 
+            <div>Subject</div>
+        <input type="text" name="subject" value={{subject}}>
+        </label>
+        <br><br>
+        <label>
+            <div>Content</div>
+        <textarea name="content">{{content}}</textarea>
+        </label>
+        <div class="error">{{error}}</div>
+
+        <input type="submit">
+
+    </form>
+<hr>
+{% endblock %}

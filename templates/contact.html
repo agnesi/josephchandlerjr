@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} contact {% endblock %}
+{% block heading %} <div class='main-title'>Contact Me</div> {% endblock %}
+{% block body %}
+    <form method="post">
+        <label> 
+            <div>Subject</div>
+        <input type="text" name="subject" value={{subject}}>
+        </label>
+        <br><br>
+        <label>
+            <div>Content</div>
+        <textarea name="content">{{content}}</textarea>
+        </label>
+
+        <input type="submit" value="send">
+
+    </form>
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="/static/stylesheets/home.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/static/img/favicon.ico" />
+    <title> Joseph Chandler </title>
+
+</head>
+
+<body>
+ <div class="home">
+    <br>
+    <div class='header'>
+    <h1>Joseph Chandler</h1>
+    <br>
+        <ul>
+	<li>
+	    <a href="https://github.com/agnesi"><img src="/static/img/GitHub-Mark-32px.png" alt="mailto"/></a>    
+	</li>           
+	<li>
+	    <a href="mailto:agnesi61607@gmail.com"><img src="/static/img/envelope.png" alt="Github"/></a>    
+	</li>
+        </ul>
+    </div>
+    
+    <br>
+    <h2> About </h2>
+    <p>
+        I am a web developer from Philadelphia. I am a completely self-taught computer programmer but have greatly benefited from many resources. Here 	       are a few of my friends on the interwebs. 
+        <a href="http://www.udacity.com"><img src="/static/img/udacity-full-130x140.png" alt="Udacity" align="top" /></a>
+        <a href="http://www.khanacademy.org"><img src="/static/img/ka.png" alt="Khan Academy" align="top" /></a>
+        <a href="http://www.nand2tetris.org"><sub>TECS</sub><a>
+      
+    </p>
+    <a href="/blog">
+        <div class="big-button">
+            Blog
+        </div>
+    </a>
+
+    
+                
+
+  </div>
+</body>
+
+</html>

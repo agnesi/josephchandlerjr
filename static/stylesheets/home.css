@@ -1,0 +1,56 @@
+body {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    background: white;
+}   
+
+.home{ 
+    background: white;
+    height: 100%;
+}
+
+img {
+    width:  32px;
+    height: 32px;
+}
+
+h1 { 
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 200;
+}
+
+p {
+    width: 100px;
+    display: block;
+    width: 70%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding-right: 8px;
+}
+
+.header ul {
+    margin: auto;
+    text-align: center;
+}
+
+.header li {
+    display: inline;
+    padding-right: 30px;    
+}
+
+.big-button {
+    padding: 20px 50px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 25px;
+    background: gray;
+    margin-left: 20px;
+    margin-top: 50px; 
+    text-align: center;
+}
+

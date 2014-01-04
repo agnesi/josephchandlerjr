@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %} Wiki Page {% endblock %}
+{% block heading %} 
+    <div class='title'>Page View</div> 
+{% endblock %}
+{% block options %}
+    <div  class="navigation">
+    <ul>
+        <li>
+            <a href="/wiki" class="nav-option"> front</a>
+        </li>
+        <li class="nav-option-sep"> | </li>
+        <li>
+            <a href='/logout' class="nav-option">logout</a>
+        </li>
+        <li class="nav-option-sep"> | </li>
+        <li>
+            {{edit_button | safe}}
+        </li>
+        <li class="nav-option-sep"> | </li>
+        <li>
+            <a href='/wiki/_history/{{page}}' class="nav-option">history</a>
+        </li>
+    </ul>
+    </div>
+    <div class="clear" />
+
+{% endblock %}
+{% block body %}
+{{content | safe}}
+{% endblock %}
+
