@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8" />
+        <link href="/static/stylesheets/home.css" rel="stylesheet" />
+        <link rel="shortcut icon" href="/static/img/favicon.ico" />        
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajas/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+        <title> Joseph Chandler </title>    
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"</script>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+               if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";
+                   fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</head>
+
+<body>
+     <div id="page">
+        <header>
+            <div id="myName">  <!-- floated left -->
+                <h1> Joseph Chandler jr. </h1>
+            </div>
+            <div id="outsideLinks">
+            <ul>
+                <li>
+                    <a href="https://github.com/agnesi">
+                        <img src="/static/img/Octocat.png" alt="emailMe"/>
+                    </a>    
+                </li>           
+               
+                <li>
+                    <a href="http://www.linkedin.com/pub/joseph-chandler.com/20/815/a68">
+                       <img src="/static/img/linkedin.png" alt="Linkedin"/>
+                   </a>    
+                </li>           
+           
+                <li>
+                    <a href="mailto:agnesi61607@gmail.com">
+                        <img src="/static/img/envelope.png" alt="Github"/>
+                    </a>    
+                </li>
+
+                <!--<li>
+                    <a href="https://twitter.com/agnesi61607" class="twitter-follow-button" data-show-count="false" data-lang="en">
+                        Follow @twitterapi
+                    </a>
+                </li>-->
+            </ul>
+            </div>
+        </header>
+        <nav>
+            <div id='wrappedUp' class="navOption">
+                about
+            </div>
+            <div class="navOption">
+                family
+            </div>
+            <div class="navOption">
+                projects
+            </div>
+        </nav>
+
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <footer>
+        </footer>
+     </div>
+</body>
+
+</html>

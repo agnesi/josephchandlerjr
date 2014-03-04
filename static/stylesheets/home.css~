@@ -83,12 +83,14 @@ nav {
 #nav2{
     position: absolute;
     margin-left: 405.85px;
+    width: 405.85px;
     background: #C7007D;
     color: #FFD200;
 }
 #nav3{
     position: absolute;
     margin-left: 811.7px;
+    width: 405.85px;
     background: #009D91;
     color: #C7007D;
 }
