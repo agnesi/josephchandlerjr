@@ -12,6 +12,9 @@ template_dir = os.path.join(root_dir, 'templates')
 
 
 application = WSGIApplication([     Route(r'/', handler='handlers.home.Home', name='home'),
+                                    Route(r'/about', handler='handlers.home.About', name='about'),
+                                    Route(r'/family', handler='handlers.home.Family', name='family'),
+                                    Route(r'/projects', handler='handlers.home.Projects', name='projects'),
                                     Route(r'/login<:/?>', handler='handlers.home.Login', name='login'),
                                     Route(r'/logout', handler='handlers.home.Logout', name='logout'),
                                     Route(r'/flush', handler='handlers.home.Flush', name='flush'), 

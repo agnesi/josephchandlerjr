@@ -14,6 +14,14 @@ class About(AppHandler):
     def get(self, *args):
         self.render("about.html")
 
+class Family(AppHandler):
+    def get(self, *args):
+        self.render("family.html")
+
+class Projects(AppHandler):
+    def get(self, *args):
+        self.render("projects.html")
+
 class Resume(AppHandler):
     def get(self, *args):
         self.render("resume.html")

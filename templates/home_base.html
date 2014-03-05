@@ -3,15 +3,15 @@
 
 <head>
         <meta charset="utf-8" />
+        <title> Joseph Chandler </title>    
         <link href="/static/stylesheets/home.css" rel="stylesheet" />
         <link rel="shortcut icon" href="/static/img/favicon.ico" />        
-        <link rel="stylesheet" href="//ajax.googleapis.com/ajas/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-        <title> Joseph Chandler </title>    
-        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"</script>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
-               if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";
-                   fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <!-- bxSlider Javascript file -->
+        <script type="text/javascript" src="static/js/jquery.bxslider.min.js"></script>
+        <!-- bxSlider CSS file -->
+        <link href="static/js/jquery.bxslider.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -24,19 +24,19 @@
             <ul>
                 <li>
                     <a href="https://github.com/agnesi">
-                        <img src="/static/img/Octocat.png" alt="emailMe"/>
+                        <img class="icon" src="/static/img/Octocat.png" alt="emailMe"/>
                     </a>    
                 </li>           
                
                 <li>
                     <a href="http://www.linkedin.com/pub/joseph-chandler.com/20/815/a68">
-                       <img src="/static/img/linkedin.png" alt="Linkedin"/>
+                       <img class="icon" src="/static/img/linkedin.png" alt="Linkedin"/>
                    </a>    
                 </li>           
            
                 <li>
                     <a href="mailto:agnesi61607@gmail.com">
-                        <img src="/static/img/envelope.png" alt="Github"/>
+                        <img class="icon" src="/static/img/envelope.png" alt="Github"/>
                     </a>    
                 </li>
 
@@ -49,15 +49,21 @@
             </div>
         </header>
         <nav>
-            <div id='nav1' class="navOption">
-                about
-            </div>
-            <div id='nav2' class="navOption">
-                family
-            </div>
-            <div id='nav3' class="navOption">
-                projects
-            </div>
+            <a href="about">
+                <div id='nav1' class="navOption">
+                    about
+                </div>
+            </a>
+            <a href="family">
+                <div id='nav2' class="navOption">
+                    family
+                </div>
+            </a>
+            <a href="projects">
+                <div id='nav3' class="navOption">
+                    projects
+                </div>
+            </a>
         </nav>
 
         <div id="content">

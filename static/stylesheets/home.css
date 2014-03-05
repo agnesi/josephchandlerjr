@@ -7,13 +7,14 @@ body {
 
 p {opacity: 0;}
 
-img {
+img.icon {
     width:  32px;
     height: 32px;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 #page{ 
@@ -92,3 +93,10 @@ nav {
     background: #009D91;
     color: #C7007D;
 }
+
+#waters{
+    height:500px;
+    background: url("/static/img/waters.jpg");
+    background-size: 100%;
+}
+
