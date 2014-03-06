@@ -1,0 +1,22 @@
+{% extends "home_base.html" %}
+
+{% block content %}
+<script type="text/javascript" src="static/js/script.js"></script>
+
+{% for project in projects %}
+    <table class="projectTable" >
+          <tr>
+              <th>start</th><td>{{project.start}}</td>
+          </tr>
+          <tr>
+              <th>end</th><td>{{project.end}}</td>
+          </tr>
+          <tr>
+              <th>description</th><td>{{project.description|safe}}</td>
+          </tr>
+
+    </table>
+{% endfor %}
+
+{% endblock %}
+

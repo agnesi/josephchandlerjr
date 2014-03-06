@@ -7,6 +7,41 @@ from handlers.base import jinja_env
 
 from google.appengine.ext import db
 
+class Project(db.Model):
+    start = db.DateTimeProperty(auto_now_add = True)
+    end = db.DateTimeProperty()
+    description = db.StringProperty()
+
+    @staticmethod
+    def project_key(group = 'default'):
+        return db.Key.from_path('projects',group)
+
+
+    @staticmethod
+    def render_str(template, **params):
+        t = jinja_env.get_template(template)
+        return t.render(params)
+    
+    @classmethod
+    def get_projects(cls):
+        """Runs DB Query and returns list of projects
+           converts all datetime objects to appropriate string repr
+        """
+        q = db.GqlQuery('select * from Project',cls.project_key())
+        projects = list(q)
+        age_set('projects',projects) # update memcache
+        return front
+
+    @classmethod
+    def create(cls, subject, content):
+        """Creates new Project and adds it to DB. Returns post's key"""
+        p = Post(parent=cls.blog_key(), subject=subject ,content=content)
+        key = p.put()
+        age_set(str(key.id()),p)
+        Post.get_front()
+        return p.key()
+
+
 class Post(db.Model):
     subject = db.StringProperty(required = True)
     content = db.TextProperty(required = True)

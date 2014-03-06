@@ -12,6 +12,8 @@
         <script type="text/javascript" src="static/js/jquery.bxslider.min.js"></script>
         <!-- bxSlider CSS file -->
         <link href="static/js/jquery.bxslider.css" rel="stylesheet" />
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);
+        js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
 </head>
 
 <body>
@@ -20,7 +22,7 @@
             <div id="myName">  <!-- floated left -->
                 <h1> Joseph Chandler jr. </h1>
             </div>
-            <div id="outsideLinks">
+            <div id="outsideLinks"> <!-- floated right -->
             <ul>
                 <li>
                     <a href="https://github.com/agnesi">
@@ -40,11 +42,11 @@
                     </a>    
                 </li>
 
-                <!--<li>
+                <li>
                     <a href="https://twitter.com/agnesi61607" class="twitter-follow-button" data-show-count="false" data-lang="en">
                         Follow @twitterapi
                     </a>
-                </li>-->
+                </li>
             </ul>
             </div>
         </header>
@@ -71,8 +73,6 @@
             {% endblock %}
         </div>
 
-        <footer>
-        </footer>
      </div>
 </body>
 
