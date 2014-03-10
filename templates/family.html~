@@ -1,14 +1,14 @@
-{% extends "home_base.html" %}
+{% extends "test_base.html" %}
 
 {% block content %}
 <script>$(document).ready(function(){$('.bxslider').bxSlider();});</script>
 <script type="text/javascript" src="static/js/script.js"></script>
 
 <ul class="bxslider">
-    <li><img src="static/img/megandi.jpg" /></li>
+    <!--<li><img src="static/img/megandi.jpg" /></li>-->
     <li><img src="static/img/pinkflower.jpg" /></li>
-    <li><img src="static/img/joshwedding.jpg" /></li>
-    <li><img src="static/img/bachduo.jpg" /></li>
+    <!--<li><img src="static/img/joshwedding.jpg" /></li>-->
+    <!--<li><img src="static/img/bachduo.jpg" /></li>-->
     <li><img src="static/img/mathlete.jpg" /></li>
 </ul>
 

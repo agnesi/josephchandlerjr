@@ -10,19 +10,18 @@ from lib.projects import projects
 
 class Home(AppHandler):
     def get(self):
-        self.render("home.html")
+        self.render("about.html")
 
 class About(AppHandler):
-    def get(self, *args):
+    def get(self):
         self.render("about.html")
 
 class Family(AppHandler):
-    def get(self, *args):
+    def get(self):
         self.render("family.html")
 
-
 class Projects(AppHandler):
-    def get(self, *args):
+    def get(self):
         p = []
         for project in projects:
             p.append(Project(*project))

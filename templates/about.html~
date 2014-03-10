@@ -1,4 +1,4 @@
-{% extends "home_base.html" %}
+{% extends "test_base.html" %}
 
 {% block content %}
 <script type="text/javascript" src="static/js/script.js"></script>

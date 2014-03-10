@@ -4,7 +4,7 @@
 <head>
         <meta charset="utf-8" />
         <title> Joseph Chandler </title>    
-        <link href="/static/stylesheets/home.css" rel="stylesheet" />
+        <link href="/static/stylesheets/style.css" rel="stylesheet" />
         <link rel="shortcut icon" href="/static/img/favicon.ico" />        
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
@@ -14,66 +14,69 @@
         <link href="static/js/jquery.bxslider.css" rel="stylesheet" />
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);
         js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
 </head>
-
 <body>
-     <div id="page">
         <header>
-            <div id="myName">  <!-- floated left -->
-                <h1> Joseph Chandler jr. </h1>
-            </div>
-            <div id="outsideLinks"> <!-- floated right -->
-            <ul>
-                <li>
-                    <a href="https://github.com/agnesi">
-                        <img class="icon" src="/static/img/Octocat.png" alt="emailMe"/>
-                    </a>    
-                </li>           
+                <div id="myName">  <!-- floated left -->
+                    <h1> Joseph Chandler jr. </h1>
+                </div>
+                <div id="outsideLinks"> <!-- floated right -->
+                <ul>
+                    <li>
+                        <a href="https://github.com/agnesi">
+                            <img class="icon" src="/static/img/Octocat.png" alt="emailMe"/>
+                        </a>    
+                    </li>           
+                   
+                    <li>
+                        <a href="http://www.linkedin.com/pub/joseph-chandler.com/20/815/a68">
+                           <img class="icon" src="/static/img/linkedin.png" alt="Linkedin"/>
+                       </a>    
+                    </li>           
                
-                <li>
-                    <a href="http://www.linkedin.com/pub/joseph-chandler.com/20/815/a68">
-                       <img class="icon" src="/static/img/linkedin.png" alt="Linkedin"/>
-                   </a>    
-                </li>           
-           
-                <li>
-                    <a href="mailto:agnesi61607@gmail.com">
-                        <img class="icon" src="/static/img/envelope.png" alt="Github"/>
-                    </a>    
-                </li>
+                    <li>
+                        <a href="mailto:agnesi61607@gmail.com">
+                            <img class="icon" src="/static/img/envelope.png" alt="Github"/>
+                        </a>    
+                    </li>
 
-                <li>
-                    <a href="https://twitter.com/agnesi61607" class="twitter-follow-button" data-show-count="false" data-lang="en">
-                        Follow @twitterapi
-                    </a>
-                </li>
-            </ul>
-            </div>
+                    <li>
+                        <a href="https://twitter.com/agnesi61607" class="twitter-follow-button" data-show-count="false" data-lang="en">
+                            Follow @twitterapi
+                        </a>
+                    </li>
+                </ul>
+                </div>
+     
+            <nav>
+                <a href="about">
+                    <div id='nav1' class="navOption">
+                        about
+                    </div>
+                </a>
+                <a href="family">
+                    <div id='nav2' class="navOption">
+                        family
+                    </div>
+                </a>
+                <a href="projects">
+                    <div id='nav3' class="navOption">
+                        projects
+                    </div>
+                </a>
+            </nav>
+
+
         </header>
-        <nav>
-            <a href="about">
-                <div id='nav1' class="navOption">
-                    about
-                </div>
-            </a>
-            <a href="family">
-                <div id='nav2' class="navOption">
-                    family
-                </div>
-            </a>
-            <a href="projects">
-                <div id='nav3' class="navOption">
-                    projects
-                </div>
-            </a>
-        </nav>
-
-        <div id="content">
+               <div id="content">
             {% block content %}
             {% endblock %}
         </div>
 
-     </div>
 </body>
 
 </html>
